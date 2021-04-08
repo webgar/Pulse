@@ -1,0 +1,175 @@
+.catalog {
+    &__tabs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        margin: 70px 0 60px 0;
+    }
+    &__tab{
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        font-size: 18px;
+        line-height: 46px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #6b6b6b;
+        text-align: center;
+        transform: skewX(-25deg);
+        margin: 0 5px;
+        cursor: pointer;
+        transition: 0.5s all;
+        &:hover{
+            box-shadow: 2px 2px 10px $main-color;
+        }
+        div{
+            transform: skew(25deg);
+        }
+        &_active{
+            background-color: $main-color;
+            color: #fff;
+            border: none;
+            &:hover{
+                box-shadow: 2px 2px 10px #000;
+            }
+        }
+    }
+    &__block{
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+        &_active{
+            display: flex;
+        }
+    }
+    &-item {
+        width: 300px;
+        min-height: 440px;
+        border: 2px solid #e8e8e8;
+        padding: 20px 20px 26px 20px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        &__img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        &__subtitle {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0d0d0d;
+            text-align: center;
+            margin-top: 20px;
+        }
+        &__discr{
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #0d0d0d;
+            text-align: center;
+            margin-top: 16px;
+        }
+        &__link{
+            display: block;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 500;
+            text-decoration: underline;
+            color: #c70101;
+            text-align: center;
+            margin-top: 17px;
+            margin-bottom: 21px;
+            text-transform: uppercase;
+            &:hover{
+                color:#c70101;
+            }
+        }
+        hr{
+            border: 2px solid #e8e8e8;
+            border-bottom: none;
+        }
+        &__footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        &__old-price{
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #555555;
+            text-decoration: line-through;
+        }
+        &__price {
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #050505;
+        }
+        &__wrapper{
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content{
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &_active{
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__list{
+            position: relative;
+            width: 50%;
+            margin-bottom: 0;
+            padding-left: 19px;
+            padding-right: 20px;
+            transform: translateX(0%);
+            list-style-type: none;
+            transition: 0.5s all;
+            &_active{
+                transform: translateX(-100%);
+            }
+            li{
+                position: relative;
+                font-size: 14px;
+                line-height: 1.2;
+                font-weight: 300;
+                color: #555555;
+                margin-bottom: 20px;
+                &::before{
+                    content:'';
+                    display: block;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    position: absolute;
+                    left: -14px;
+                    top: 6px;
+                }
+            }
+           
+        }
+        &__back{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            color: #c70101;
+            text-transform: uppercase;
+            margin-bottom: 21px;
+            &:hover{
+                color: $main-color;
+            }
+        }
+        
+    }
+}

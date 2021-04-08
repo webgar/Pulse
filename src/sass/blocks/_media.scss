@@ -1,0 +1,56 @@
+@media screen and (max-width: 991px) {
+	.promo{
+		padding: 21px 40px 93px 40px;
+	}
+	.advantages{
+		padding: 70px 40px 78px 40px;
+	}
+}
+@media screen and (max-width: 881px) {
+	.advantages{
+		&__item{
+			width: 220px;
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	.header{
+		&__logo{
+			width: 170px;
+		}
+		&__official{
+			font-size: 10px;
+			&span{
+				font-size: 12px;
+			}
+		}
+		&__phone{
+			font-size: 14px;
+		}   
+	}
+	.button{
+		width: 120px;
+		height: 25px;
+		font-size: 10px;
+	}
+	.promo{
+		&__wrapper{
+			align-items: center;
+		}
+		&__header{
+			font-size: 35px;
+		}
+		&__subheader{
+			font-size: 22px;
+		}
+	}
+}
+@media screen and (max-width: 575px) {
+	.header{
+		flex-wrap: wrap;
+		div:nth-child(3){
+			justify-content: center;
+		}			 
+	}
+}
+	
